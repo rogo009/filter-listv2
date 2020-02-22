@@ -5,9 +5,9 @@ const filterInput = document.getElementById('filterInput');
 filterInput.addEventListener('keyup', filterNames);
 
 function filterNames() {
-    // get value of input
+    // get *value* of the input field use .value and convert to uppercase
     let filterValue = document.getElementById('filterInput').value.toUpperCase();
-    console.log(filterValue);
+    // console.log(filterValue);
 
     // get names ul
     let ul = document.getElementById('names');
