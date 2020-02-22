@@ -9,3 +9,5 @@
 ## all entries in the input field are converted to uppercase
 
 ## hides whatever a tag that does not match the entered letters in the input field
+
+## use querySelectorAll to grab li items within the ul

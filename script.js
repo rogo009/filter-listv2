@@ -5,19 +5,19 @@ const filterInput = document.getElementById('filterInput');
 filterInput.addEventListener('keyup', filterNames);
 
 function filterNames() {
-    // get *value* of the input field use .value and convert to uppercase
-    let filterValue = document.getElementById('filterInput').value.toUpperCase();
-    // console.log(filterValue);
+    // get *value* of the input field use .value and convert toUpperCase()
+    const filterValue = document.getElementById('filterInput').value.toUpperCase();
 
-    // get names ul
-    let ul = document.getElementById('names');
-    // get lis from ul
-    let li = ul.querySelectorAll('li.collection-item');
+    // target ul and id names
+    const ul = document.getElementById('names');
+
+    // target li items from the ul the actual person's names not the letters. this puts items into an array
+    const li = ul.querySelectorAll('li.collection-item');
 
     // loop through collection-item lis
-    for(let i = 0; i < li.length; i++ ){
+    for(let i = 0; i < li.length; i++){
         let a = li[i].getElementsByTagName('a')[0];
-        // if matched
+        // if matched innerHTML grabs what's inside the a tag. if it's greater than -1 that means there's a match to one of the lettesr in the names
         if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
             li[i].style.display = '';
         } else {
