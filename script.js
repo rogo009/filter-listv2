@@ -1,10 +1,10 @@
+// target input field
 const filterInput = document.getElementById('filterInput');
-const form = document.getElementById('names');
 
+// event listener
 filterInput.addEventListener('keyup', filterNames);
 
 function filterNames() {
-
     // get value of input
     let filterValue = document.getElementById('filterInput').value.toUpperCase();
     console.log(filterValue);
